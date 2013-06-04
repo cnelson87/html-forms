@@ -1,0 +1,321 @@
+﻿<!DOCTYPE html>
+<html dir="ltr" lang="en" class="nojs">
+<head>
+	<meta charset="utf-8" />
+
+	<title>HTML Forms</title>
+
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Fjalla+One" />
+	<link rel="stylesheet" href="_ui/css/font-awesome.min.css" />
+	<link rel="stylesheet" href="_ui/css/base.css" />
+	<link rel="stylesheet" href="_ui/css/utility.css" />
+	<link rel="stylesheet" href="_ui/css/forms.css" />
+	<link rel="stylesheet" href="_ui/css/layout.css" />
+	<!--[if IE 9]><link rel="stylesheet" href="_ui/css/ie9.css" /><![endif]-->
+	<!--[if IE 8]><link rel="stylesheet" href="_ui/css/ie8.css" /><![endif]-->
+	<!--[if IE 7]>
+		<link rel="stylesheet" href="_ui/css/font-awesome-ie7.min.css">
+		<link rel="stylesheet" href="_ui/css/ie7.css" />
+	<![endif]-->
+
+	<script src="_ui/js/lib/modernizr.custom.min.js"></script>
+	<script src="_ui/js/lib/jquery-1.9.1.min.js"></script>
+	<script src="_ui/js/cnjs.js"></script>
+	<script src="_ui/js/utils.js"></script>
+	<script src="_ui/js/init.js"></script>
+
+</head>
+<body>
+<a id="top" href="#"></a>
+
+<div id="wrapper">
+
+
+	<header id="header">
+		<div class="header-inner">
+
+		</div>
+	</header>
+
+
+	<div id="main" class="twocols">
+		<div class="main-inner">
+
+			<div id="content">
+
+				<h1>HTML Forms</h1>
+
+				<form id="Form" method="POST" action="index.html">
+
+					<fieldset id="TextFieldset1" class="text-fields">
+						<h2>Horizontal Form Fields</h2>
+						<ol class="horizontal-fields">
+							<li>
+								<label for="Text1">Text</label>
+								<input type="text" id="Text1" name="Text1" data-label="Text" />
+								<span class="form-note">form note</span>
+							</li>
+							<li>
+								<label for="Password1">Password</label>
+								<input type="password" id="Password1" name="Password1" data-label="Password" />
+							</li>
+							<li>
+								<label for="Email1">Email</label>
+								<input type="email" id="Email1" name="Email1" data-label="Email" />
+								<div class="form-message">
+									This is a form message<br />
+									A multiline message.
+								</div>
+							</li>
+							<li>
+								<label for="Tel1">Telephone</label>
+								<input type="tel" id="Tel1" name="Tel1" maxlength="10" data-label="Telephone" />
+							</li>
+							<li>
+								<label for="Select1">Select</label>
+								<select id="Select1" name="Select1" data-label="Select">
+									<option value="">Select</option>
+									<option value="A">A</option>
+									<option value="1">1</option>
+								</select>
+							</li>
+							<li>
+								<label for="Number1">Number</label>
+								<input type="number" id="Number1" name="Number1" min="1" max="999" data-label="Number" />
+							</li>
+							<li>
+								<label for="Comments1">Comments</label>
+								<textarea id="Comments1" name="Comments1" maxlength="25" data-label="Comments"></textarea>
+							</li>
+						</ol>
+					</fieldset>
+
+					<fieldset class="form-btns form-btns-right">
+						<em>(right-aligned)</em>
+						&nbsp;
+						<input type="submit" id="Submit1" name="Submit1" value="Submit" />
+					</fieldset>
+
+					<br /><br />
+
+					<fieldset id="TextFieldset2" class="text-fields">
+						<h2>Vertical Form Fields</h2>
+						<ol class="vertical-fields">
+							<li>
+								<label for="Text2">Text</label>
+								<input type="text" id="Text2" name="Text2" data-label="Text" />
+								<span class="form-note">form note</span>
+							</li>
+							<li>
+								<label for="Password2">Password</label>
+								<input type="password" id="Password2" name="Password2" data-label="Password" />
+							</li>
+							<li>
+								<label for="Email2">Email</label>
+								<input type="email" id="Email2" name="Email2" data-label="Email" />
+								<div class="form-message">
+									This is a form message<br />
+									A multiline message.
+								</div>
+							</li>
+							<li>
+								<label for="Tel2">Telephone</label>
+								<input type="tel" id="Tel2" name="Tel2" maxlength="10" data-label="Telephone" />
+							</li>
+							<li>
+								<label for="Select2">Select</label>
+								<select id="Select2" name="Select2" data-label="Select" class="input-med">
+									<option value="">Select</option>
+									<option value="B">B</option>
+									<option value="2">2</option>
+								</select>
+							</li>
+							<li>
+								<label for="Number2">Number</label>
+								<input type="number" id="Number2" name="Number2" min="1" max="999" data-label="Number" />
+							</li>
+							<li>
+								<label for="Comments2">Comments</label>
+								<textarea id="Comments2" name="Comments2" maxlength="25" data-label="Comments" class="textarea-med"></textarea>
+							</li>
+						</ol>
+					</fieldset>
+
+					<fieldset class="form-btns">
+						<input type="submit" id="Submit2" name="Submit2" value="Submit" />
+						&nbsp;
+						<em>(default: left-aligned)</em>
+					</fieldset>
+
+					<br /><br />
+
+					<fieldset id="TextFieldset3" class="text-fields">
+						<h2>Inline Form Fields</h2>
+						<ol class="inline-fields">
+							<li>
+								<label for="Text3">Text</label>
+								<input type="text" id="Text3" name="Text3" data-label="Text" />
+							</li>
+							<li>
+								<label for="Password3">Password</label>
+								<input type="password" id="Password3" name="Password3" data-label="Password" />
+							</li>
+							<li>
+								<label for="Email3">Email</label>
+								<input type="email" id="Email3" name="Email3" data-label="Email" />
+							</li>
+							<li>
+								<label for="Tel3">Telephone</label>
+								<input type="tel" id="Tel3" name="Tel3" maxlength="10" data-label="Telephone" />
+							</li>
+							<li>
+								<label for="Select3">Select</label>
+								<select id="Select3" name="Select3" data-label="Select">
+									<option value="">Select</option>
+									<option value="C">C</option>
+									<option value="3">3</option>
+								</select>
+							</li>
+							<li>
+								<label for="Number3">Number</label>
+								<input type="number" id="Number3" name="Number3" min="1" max="999" data-label="Number" />
+							</li>
+							<li>
+								<label for="Comments3">Comments</label>
+								<textarea id="Comments3" name="Comments3" maxlength="25" data-label="Comments"></textarea>
+							</li>
+						</ol>
+					</fieldset>
+
+					<fieldset class="form-btns">
+						<input type="submit" id="Submit3" name="Submit3" value="Submit" />
+					</fieldset>
+
+					<br /><br />
+
+					<fieldset class="check-fields">
+						<h2>Horizontal Checkboxes &amp;<br />Vertical Radios</h2>
+						<ol class="inline-fields">
+							<li>
+								<input type="checkbox" id="checkbox1a" name="checkbox1a" />
+								<label for="checkbox1a">Lorem Ispum 1A</label>
+							</li>
+							<li>
+								<input type="checkbox" id="checkbox1b" name="checkbox1b" />
+								<label for="checkbox1b">Dolor Sit Amet 1B</label>
+							</li>
+							<li>
+								<input type="checkbox" id="checkbox1c" name="checkbox1c" />
+								<label for="checkbox1c">CB 1C</label>
+							</li>
+							<li>
+								<input type="checkbox" id="checkbox1d" name="checkbox1d" />
+								<label for="checkbox1d">CB 1D</label>
+							</li>
+							<li>
+								<input type="checkbox" id="checkbox1e" name="checkbox1e" />
+								<label for="checkbox1e">CB 1E</label>
+							</li>
+						</ol>
+						<ol class="block-fields">
+							<li>
+								<input type="radio" id="radio1a" name="radiogroup1" />
+								<label for="radio1a">RB 1A</label>
+							</li>
+							<li>
+								<input type="radio" id="radio1b" name="radiogroup1" />
+								<label for="radio1b">RB 1B</label>
+							</li>
+							<li>
+								<input type="radio" id="radio1c" name="radiogroup1" />
+								<label for="radio1c">RB 1C</label>
+							</li>
+						</ol>
+					</fieldset>
+
+					<fieldset class="form-btns">
+						<input type="submit" id="Submit3" name="Submit3" value="Submit" />
+					</fieldset>
+
+					<br /><br />
+
+					<fieldset class="check-fields">
+						<h2>Vertical Checkboxes &amp;<br />Horizontal Radios</h2>
+						<ol class="block-fields">
+							<li>
+								<input type="checkbox" id="checkbox2a" name="checkbox2a" />
+								<label for="checkbox2a">Lorem Ispum 2A</label>
+							</li>
+							<li>
+								<input type="checkbox" id="checkbox2b" name="checkbox2b" />
+								<label for="checkbox2b">Dolor Sit Amet 2B - this is a really long label that wraps to a second line</label>
+							</li>
+							<li>
+								<input type="checkbox" id="checkbox2c" name="checkbox2c" />
+								<label for="checkbox2c">CB 2C</label>
+							</li>
+							<li>
+								<input type="checkbox" id="checkbox2d" name="checkbox2d" />
+								<label for="checkbox2d">CB 2D</label>
+							</li>
+							<li>
+								<input type="checkbox" id="checkbox2e" name="checkbox2e" />
+								<label for="checkbox2e">CB 2E</label>
+							</li>
+						</ol>
+						<ol class="inline-fields">
+							<li>
+								<input type="radio" id="radio2a" name="radiogroup2" />
+								<label for="radio2a">RB 2A</label>
+							</li>
+							<li>
+								<input type="radio" id="radio2b" name="radiogroup2" />
+								<label for="radio2b">RB 2B</label>
+							</li>
+							<li>
+								<input type="radio" id="radio2c" name="radiogroup2" />
+								<label for="radio2c">RB 2C</label>
+							</li>
+						</ol>
+					</fieldset>
+
+					<fieldset class="form-btns">
+						<input type="submit" id="Submit4" name="Submit4" value="Submit" />
+					</fieldset>
+
+					<br /><br />
+
+				</form>
+
+			</div>
+
+			<aside id="subcol">
+
+				<div class="callout">
+					<h3>Aside Callout</h3>
+					<p>
+						Mustache vegan VHS ullamco helvetica, esse cupidatat sapiente. Literally actually Carles blog banh mi, YOLO asymmetrical wolf tote bag selfies american apparel Williamsburg vero Odd Future.
+					</p>
+					<p>
+						Tofu before they sold out fugiat keffiyeh, odio photo booth keytar laboris velit pour-over nulla Truffaut plaid esse disrupt. Seitan blog meh church-key. Eu pour-over pug retro. Sartorial hoodie readymade, elit craft beer voluptate magna. Fashion axe delectus exercitation, excepteur synth blog Marfa mollit gentrify placeat culpa cupidatat.
+					</p>
+				</div>
+
+			</aside>
+
+			<div class="clear"></div>
+		</div>
+	</div>
+
+
+	<footer id="footer">
+		<div class="footer-inner">
+
+		</div>
+	</footer>
+
+
+</div>
+
+</body>
+</html>
