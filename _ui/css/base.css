@@ -103,6 +103,7 @@ table {
     }
 
 h1 {
+	color: #464646;
 	font-family: 'Droid Sans', Arial, sans-serif;
 	font-size: 32px;
 	font-weight: normal;
@@ -110,6 +111,7 @@ h1 {
 	margin: 0 0 18px 0;
 }
 h2, .h2 {
+	color: #464646;
 	font-family: 'Droid Sans', Arial, sans-serif;
 	font-size: 22px;
 	font-weight: normal;

@@ -25,13 +25,13 @@ fieldset#form_example {}
 *	YouTube embed
 **/
 
-iframe#ytplayer {
+iframe.ytplayer {
 	display: block;
 	width: 812px;
 	height: 456px;
 	border: 0;
+	position: relative;
 }
-
 
 /*** /YouTube embed ***/
 
