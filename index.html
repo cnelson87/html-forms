@@ -58,9 +58,12 @@
 						<h2>Horizontal Form Fields</h2>
 						<ol class="horizontal-fields">
 							<li>
-								<label for="Text1">Text</label>
-								<input type="text" id="Text1" name="Text1" data-label="Text" />
-								<span class="form-note">form note</span>
+								<label for="Text1A">Text A</label>
+								<input type="text" id="Text1A" name="Text1A" data-label="Text A" placeholder="Text A" />
+							</li>
+							<li>
+								<label for="Text1B"><span class="offscreen">Text B</span></label>
+								<input type="text" id="Text1B" name="Text1B" data-label="Text B" placeholder="Text B" />
 							</li>
 							<li>
 								<label for="Password1">Password</label>
@@ -75,6 +78,10 @@
 								</div>
 							</li>
 							<li>
+								<label for="Url1">URL</label>
+								<input type="url" id="Url1" name="Url1" data-label="URL" />
+							</li>
+							<li>
 								<label for="Tel1">Telephone</label>
 								<input type="tel" id="Tel1" name="Tel1" maxlength="10" data-label="Telephone" />
 							</li>
@@ -85,6 +92,7 @@
 									<option value="A">A</option>
 									<option value="1">1</option>
 								</select>
+								<span class="form-note">form note</span>
 							</li>
 							<li>
 								<label for="Number1">Number</label>
@@ -92,7 +100,7 @@
 							</li>
 							<li>
 								<label for="Comments1">Comments</label>
-								<textarea id="Comments1" name="Comments1" maxlength="25" data-label="Comments"></textarea>
+								<textarea id="Comments1" name="Comments1" maxlength="25" data-label="Comments" class="textarea-sm"></textarea>
 							</li>
 						</ol>
 					</fieldset>
@@ -109,9 +117,12 @@
 						<h2>Vertical Form Fields</h2>
 						<ol class="vertical-fields">
 							<li>
-								<label for="Text2">Text</label>
-								<input type="text" id="Text2" name="Text2" data-label="Text" />
-								<span class="form-note">form note</span>
+								<label for="Text2A">Text A</label>
+								<input type="text" id="Text2A" name="Text2A" data-label="Text A" placeholder="Text A" />
+							</li>
+							<li>
+								<label for="Text2B"><span class="offscreen">Text B</span></label>
+								<input type="text" id="Text2B" name="Text2B" data-label="Text B" placeholder="Text B" />
 							</li>
 							<li>
 								<label for="Password2">Password</label>
@@ -126,6 +137,10 @@
 								</div>
 							</li>
 							<li>
+								<label for="Url2">URL</label>
+								<input type="url" id="Url2" name="Url2" data-label="URL" />
+							</li>
+							<li>
 								<label for="Tel2">Telephone</label>
 								<input type="tel" id="Tel2" name="Tel2" maxlength="10" data-label="Telephone" />
 							</li>
@@ -136,6 +151,7 @@
 									<option value="B">B</option>
 									<option value="2">2</option>
 								</select>
+								<span class="form-note">form note</span>
 							</li>
 							<li>
 								<label for="Number2">Number</label>
@@ -160,8 +176,13 @@
 						<h2>Inline Form Fields</h2>
 						<ol class="inline-fields">
 							<li>
-								<label for="Text3">Text</label>
-								<input type="text" id="Text3" name="Text3" data-label="Text" />
+								<label for="Text3A">Text A</label>
+								<input type="text" id="Text3A" name="Text3A" data-label="Text A" placeholder="Text A" />
+								<!--
+								<label for="Text3B" class="offscreen">Text B</label>
+								<label for="Text3B"><span class="offscreen">Text B</span></label>
+								-->
+								<input type="text" id="Text3B" name="Text3B" data-label="Text B" placeholder="Text B" />
 							</li>
 							<li>
 								<label for="Password3">Password</label>
@@ -170,6 +191,10 @@
 							<li>
 								<label for="Email3">Email</label>
 								<input type="email" id="Email3" name="Email3" data-label="Email" />
+							</li>
+							<li>
+								<label for="Url3">URL</label>
+								<input type="url" id="Url3" name="Url3" data-label="URL" />
 							</li>
 							<li>
 								<label for="Tel3">Telephone</label>
@@ -189,13 +214,21 @@
 							</li>
 							<li>
 								<label for="Comments3">Comments</label>
-								<textarea id="Comments3" name="Comments3" maxlength="25" data-label="Comments"></textarea>
+								<textarea id="Comments3" name="Comments3" maxlength="25" data-label="Comments" class="textarea-lrg"></textarea>
+							</li>
+							<li>
+								<label for="SizeA">Sizes</label>
+								<input type="text" id="SizeA" name="SizeA" class="input-xshort" placeholder="xshort" />
+								<input type="text" id="SizeB" name="SizeB" class="input-short" placeholder="short" />
+								<input type="text" id="SizeC" name="SizeC" class="input-xlong" placeholder="xlong" />
+							</li>
+							<li>
+								<label for="SizeD">More Sizes</label>
+								<input type="text" id="SizeD" name="SizeD" class="input-med" placeholder="med" />
+								<input type="text" id="SizeE" name="SizeE" class="input-long" placeholder="long" />
+								
 							</li>
 						</ol>
-					</fieldset>
-
-					<fieldset class="form-btns">
-						<input type="submit" id="Submit3" name="Submit3" value="Submit" />
 					</fieldset>
 
 					<br /><br />
@@ -305,6 +338,16 @@
 					</p>
 					<p>
 						Tofu before they sold out fugiat keffiyeh, odio photo booth keytar laboris velit pour-over nulla Truffaut plaid esse disrupt. Seitan blog meh church-key. Eu pour-over pug retro. Sartorial hoodie readymade, elit craft beer voluptate magna. Fashion axe delectus exercitation, excepteur synth blog Marfa mollit gentrify placeat culpa cupidatat.
+					</p>
+				</div>
+
+				<div class="callout">
+					<h3>Another Callout</h3>
+					<p>
+						Tofu before they sold out fugiat keffiyeh, odio photo booth keytar laboris velit pour-over nulla Truffaut plaid esse disrupt. Seitan blog meh church-key. Eu pour-over pug retro. Sartorial hoodie readymade, elit craft beer voluptate magna. Fashion axe delectus exercitation, excepteur synth blog Marfa mollit gentrify placeat culpa cupidatat.
+					</p>
+					<p>
+						Mustache vegan VHS ullamco helvetica, esse cupidatat sapiente. Literally actually Carles blog banh mi, YOLO asymmetrical wolf tote bag selfies american apparel Williamsburg vero Odd Future.
 					</p>
 				</div>
 

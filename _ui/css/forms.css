@@ -29,13 +29,13 @@ input, select, textarea {
 	color: #333;
 	font-family: Arial, sans-serif;
 	font-size: 12px;
-	border: 1px solid #ccc;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
+	vertical-align: middle;
 	margin: 0;
 	padding: 0;
-	vertical-align: top;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 }
+
 input:invalid,
 select:invalid,
 textarea:invalid {
@@ -43,62 +43,89 @@ textarea:invalid {
 	outline: 0;
 }
 
-input[type=email],
-input[type=number],
-input[type=tel],
-input[type=text],
-input[type=url],
-input[type=password],
-input[type=search],
-select {
+input:not([type=checkbox]):not([type=radio]):not([type=submit]) {
 	width: 140px;
-	height: 24px;
-	padding: 3px;
+	height: 20px;
+	border: 1px solid #ccc;
+	padding: 2px;
 }
-input[type=number],
+
 select {
 	width: auto;
 	min-width: 80px;
+	height: 20px;
+	border: 1px solid #ccc;
+	padding: 1px;
 }
+
 textarea {
 	line-height: 16px;
-	width: 140px;
-	height: 40px;
-	padding: 3px;
+	border: 1px solid #ccc;
+	padding: 2px;
+	vertical-align: top;
 }
-input[type=email]:focus,
-input[type=number]:focus,
-input[type=tel]:focus,
-input[type=text]:focus,
-input[type=url]:focus,
-input[type=password]:focus,
-input[type=search]:focus,
+
+input:not([type=checkbox]):not([type=radio]):not([type=submit]):focus,
 select:focus,
 textarea:focus {
 	border-color: #333;
 	outline: none;
 }
-input[type=email].invalid,
-input[type=number].invalid,
-input[type=tel].invalid,
-input[type=text].invalid,
-input[type=url].invalid,
-input[type=password].invalid,
+
+input:not([type=checkbox]):not([type=radio]):not([type=submit])[disabled=disabled],
+input:not([type=checkbox]):not([type=radio]):not([type=submit]).disabled,
+select[disabled=disabled], select.disabled,
+textarea[disabled=disabled], textarea.disabled {
+	color: #ccc;
+	border-color: #dedede;
+}
+
+input:not([type=checkbox]):not([type=radio]):not([type=submit]).invalid,
 select.invalid,
 textarea.invalid {
 	border-color: #c00;
 }
-input[type=email][disabled=disabled], input[type=email].disabled,
-input[type=number][disabled=disabled], input[type=number].disabled,
-input[type=tel][disabled=disabled], input[type=tel].disabled,
-input[type=text][disabled=disabled], input[type=text].disabled,
-input[type=url][disabled=disabled], input[type=url].disabled,
-input[type=password][disabled=disabled], input[type=password].disabled,
-select[disabled=disabled], select.disabled,
-option[disabled=disabled], option.disabled,
-textarea[disabled=disabled], textarea.disabled {
-	color: #ccc;
-	border-color: #dedede;
+
+input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-med,
+select.input-med {
+	/* default */
+	width: 140px;
+}
+input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-xshort,
+select.input-xshort {
+	width: 40px;
+	min-width: 40px;
+}
+input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-short,
+select.input-short {
+	width: 80px;
+}
+input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-long,
+select.input-long {
+	width: 240px;
+}
+input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-xlong,
+select.input-xlong {
+	width: 360px;
+}
+input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-auto,
+select.input-auto {
+	width: auto;
+	min-width: auto;
+}
+
+textarea.textarea-sm {
+	/* default */
+	width: 140px;
+	height: 38px; /* line-height X 2 + padding + border */
+}
+textarea.textarea-med {
+	width: 300px;
+	height: 70px; /* line-height X 4 + padding + border */
+}
+textarea.textarea-lrg {
+	width: 520px;
+	height: 102px; /* line-height X 6 + padding + border */
 }
 
 input[type=checkbox],
@@ -106,6 +133,7 @@ input[type=radio] {
 	/* setting exact size removes IE padding, makes uniform cross-browser */
 	width: 15px;
 	height: 15px;
+	cursor: pointer;
 	vertical-align: middle;
 }
 
@@ -130,6 +158,12 @@ input[type=button]:focus, input[type=button]:hover,
 button:focus , button:hover {
 	background: #dedede;
 	outline: none;
+}
+
+input + input, input + select, input + textarea,
+select + input, select + select, select + textarea,
+textarea + input, textarea + select, textarea + textarea {
+	margin-left: 5px;
 }
 
 input.btn {
@@ -178,42 +212,6 @@ input.sm-btn:focus, input.sm-btn:hover {
 	background: #c00;
 }
 
-.input-med {
-	/* default */
-	width: 140px;
-}
-.input-xshort {
-	width: 40px;
-	min-width: 40px;
-}
-.input-short {
-	width: 80px;
-}
-.input-long {
-	width: 240px;
-}
-.input-xlong {
-	width: 360px;
-}
-.input-auto {
-	width: auto;
-	min-width: auto;
-}
-
-textarea.textarea-sm {
-	/* default */
-	width: 140px;
-	height: 40px; /* line-height X 2 + padding + border */
-}
-textarea.textarea-med {
-	width: 300px;
-	height: 72px; /* line-height X 4 + padding + border */
-}
-textarea.textarea-lrg {
-	width: 520px;
-	height: 104px; /* line-height X 6 + padding + border */
-}
-
 span.form-note { /* note next to an input field */
 	display: inline-block;
 	color: #666;
@@ -252,10 +250,9 @@ fieldset.text-fields {
 		margin: 0 0 8px 0;
 	}
 	fieldset.text-fields ol.horizontal-fields label {
-		float: left;
 		width: 100px;
 		text-align: right;
-		margin: 2px 10px 2px 0;
+		margin: 1px 5px 1px 0;
 	}
 	fieldset.text-fields ol.horizontal-fields div.form-message {
 		margin-left: 110px; /* matches label width + margin */
@@ -269,8 +266,7 @@ fieldset.text-fields {
 		margin-right: 10px;
 	}
 	fieldset.text-fields ol.inline-fields label {
-		float: left;
-		margin: 2px 10px 2px 0;
+		margin: 1px 5px 1px 0;
 	}
 
 /* checkbox and radio inputs */
@@ -284,7 +280,7 @@ fieldset.check-fields {
 	fieldset.check-fields ol > li{
 		margin: 0 0 8px 0;
 	}
-	fieldset.check-fields ol.inline-fields > li{
+	fieldset.check-fields ol.inline-fields > li {
 		display: inline-block;
 		margin-right: 10px;
 	}
