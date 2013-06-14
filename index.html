@@ -2,6 +2,8 @@
 <html dir="ltr" lang="en" class="nojs">
 <head>
 	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
 	<title>HTML Forms</title>
 
@@ -54,7 +56,7 @@
 
 				<form id="Form" method="POST" action="index.html">
 
-					<fieldset id="TextFieldset1" class="text-fields">
+					<fieldset>
 						<h2>Horizontal Form Fields</h2>
 						<ol class="horizontal-fields">
 							<li>
@@ -99,13 +101,13 @@
 								<input type="number" id="Number1" name="Number1" min="1" max="999" data-label="Number" />
 							</li>
 							<li>
-								<label for="Comments1">Comments</label>
-								<textarea id="Comments1" name="Comments1" maxlength="25" data-label="Comments" class="textarea-sm"></textarea>
+								<label for="Comments1" class="width-auto">Comments</label>
+								<textarea id="Comments1" name="Comments1" maxlength="25" data-label="Comments" class="textarea-med"></textarea>
 							</li>
 						</ol>
 					</fieldset>
 
-					<fieldset class="form-btns form-btns-right">
+					<fieldset class="form-btns align-right">
 						<em>(right-aligned)</em>
 						&nbsp;
 						<input type="submit" id="Submit1" name="Submit1" value="Submit" />
@@ -113,7 +115,7 @@
 
 					<br /><br />
 
-					<fieldset id="TextFieldset2" class="text-fields">
+					<fieldset>
 						<h2>Vertical Form Fields</h2>
 						<ol class="vertical-fields">
 							<li>
@@ -172,7 +174,7 @@
 
 					<br /><br />
 
-					<fieldset id="TextFieldset3" class="text-fields">
+					<fieldset>
 						<h2>Inline Form Fields</h2>
 						<ol class="inline-fields">
 							<li>
@@ -212,17 +214,17 @@
 								<label for="Number3">Number</label>
 								<input type="number" id="Number3" name="Number3" min="1" max="999" data-label="Number" />
 							</li>
-							<li>
+							<li class="full-width">
 								<label for="Comments3">Comments</label>
 								<textarea id="Comments3" name="Comments3" maxlength="25" data-label="Comments" class="textarea-lrg"></textarea>
 							</li>
-							<li>
+							<li class="full-width">
 								<label for="SizeA">Sizes</label>
 								<input type="text" id="SizeA" name="SizeA" class="input-xshort" placeholder="xshort" />
 								<input type="text" id="SizeB" name="SizeB" class="input-short" placeholder="short" />
 								<input type="text" id="SizeC" name="SizeC" class="input-xlong" placeholder="xlong" />
 							</li>
-							<li>
+							<li class="full-width">
 								<label for="SizeD">More Sizes</label>
 								<input type="text" id="SizeD" name="SizeD" class="input-med" placeholder="med" />
 								<input type="text" id="SizeE" name="SizeE" class="input-long" placeholder="long" />
@@ -233,9 +235,9 @@
 
 					<br /><br />
 
-					<fieldset class="check-fields">
+					<fieldset>
 						<h2>Horizontal Checkboxes &amp;<br />Vertical Radios</h2>
-						<ol class="inline-fields">
+						<ol class="inline-fields cb-rb-fields">
 							<li>
 								<input type="checkbox" id="checkbox1a" name="checkbox1a" />
 								<label for="checkbox1a">Lorem Ispum 1A</label>
@@ -257,7 +259,7 @@
 								<label for="checkbox1e">CB 1E</label>
 							</li>
 						</ol>
-						<ol class="block-fields">
+						<ol class="vertical-fields cb-rb-fields">
 							<li>
 								<input type="radio" id="radio1a" name="radiogroup1" />
 								<label for="radio1a">RB 1A</label>
@@ -273,15 +275,11 @@
 						</ol>
 					</fieldset>
 
-					<fieldset class="form-btns">
-						<input type="submit" id="Submit3" name="Submit3" value="Submit" />
-					</fieldset>
-
 					<br /><br />
 
-					<fieldset class="check-fields">
+					<fieldset>
 						<h2>Vertical Checkboxes &amp;<br />Horizontal Radios</h2>
-						<ol class="block-fields">
+						<ol class="vertical-fields cb-rb-fields">
 							<li>
 								<input type="checkbox" id="checkbox2a" name="checkbox2a" />
 								<label for="checkbox2a">Lorem Ispum 2A</label>
@@ -303,7 +301,7 @@
 								<label for="checkbox2e">CB 2E</label>
 							</li>
 						</ol>
-						<ol class="inline-fields">
+						<ol class="inline-fields cb-rb-fields">
 							<li>
 								<input type="radio" id="radio2a" name="radiogroup2" />
 								<label for="radio2a">RB 2A</label>
@@ -319,8 +317,19 @@
 						</ol>
 					</fieldset>
 
+					<br /><br />
+
+					<h2>Button Styles</h2>
 					<fieldset class="form-btns">
-						<input type="submit" id="Submit4" name="Submit4" value="Submit" />
+						<input type="submit" value="default" />
+						<br />
+						<br />
+						<input type="submit" value=".btn" class="btn" />
+						<input type="submit" value=".sm-btn" class="sm-btn" />
+						<br />
+						<br />
+						<input type="submit" value=".alt-btn" class="alt-btn" />
+						<input type="submit" value=".sm-alt-btn" class="sm-alt-btn" />
 					</fieldset>
 
 					<br /><br />
