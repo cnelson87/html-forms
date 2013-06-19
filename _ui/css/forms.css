@@ -165,6 +165,12 @@ input[type=radio] {
 	input[type=radio] + label {
 		padding-top: 0;
 	}
+input[type=checkbox][disabled=disabled],
+input[type=radio][disabled=disabled],
+input[type=checkbox].disabled,
+input[type=radio].disabled {
+	cursor: default;
+}
 	input[type=checkbox][disabled=disabled] + label,
 	input[type=radio][disabled=disabled] + label,
 	input[type=checkbox].disabled + label,
