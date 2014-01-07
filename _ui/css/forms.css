@@ -71,7 +71,7 @@ textarea:invalid {
 
 /* start text inputs, selects, textareas */
 
-input:not([type=checkbox]):not([type=radio]):not([type=submit]),
+input:not([type=range]):not([type=checkbox]):not([type=radio]):not([type=submit]),
 select,
 textarea {
 	width: 140px;
@@ -91,17 +91,17 @@ textarea {
 	line-height: 16px;
 }
 
-input:not([type=checkbox]):not([type=radio]):not([type=submit]):focus,
+input:not([type=range]):not([type=checkbox]):not([type=radio]):not([type=submit]):focus,
 select:focus,
 textarea:focus {
 	border-color: #333;
 	outline: none;
 }
 
-input:not([type=checkbox]):not([type=radio]):not([type=submit])[disabled=disabled],
-input:not([type=checkbox]):not([type=radio]):not([type=submit]).disabled,
-select[disabled=disabled], select.disabled,
-textarea[disabled=disabled], textarea.disabled {
+input:not([type=range]):not([type=checkbox]):not([type=radio]):not([type=submit])[disabled],
+input:not([type=range]):not([type=checkbox]):not([type=radio]):not([type=submit]).disabled,
+select[disabled], select.disabled,
+textarea[disabled], textarea.disabled {
 	color: #ccc;
 	border-color: #dedede;
 }
@@ -156,8 +156,8 @@ textarea.textarea-lrg {
 input[type=checkbox],
 input[type=radio] {
 	/* setting exact size removes IE padding, makes uniform cross-browser */
-	width: 15px;
-	height: 15px;
+	width: 16px;
+	height: 16px;
 	cursor: pointer;
 	vertical-align: middle;
 }
@@ -165,20 +165,34 @@ input[type=radio] {
 	input[type=radio] + label {
 		padding-top: 0;
 	}
-input[type=checkbox][disabled=disabled],
-input[type=radio][disabled=disabled],
+input[type=checkbox][disabled],
+input[type=radio][disabled],
 input[type=checkbox].disabled,
 input[type=radio].disabled {
 	cursor: default;
 }
-	input[type=checkbox][disabled=disabled] + label,
-	input[type=radio][disabled=disabled] + label,
+	input[type=checkbox][disabled] + label,
+	input[type=radio][disabled] + label,
 	input[type=checkbox].disabled + label,
 	input[type=radio].disabled + label {
 		color: #ccc;
 	}
 
 /* end checkbox & radio inputs */
+
+/* start range input */
+
+input[type=range] {
+	width: 140px;
+	height: 24px;
+	cursor: pointer;
+}
+	input[type=range][disabled],
+	input[type=range].disabled {
+		cursor: default;
+	}
+
+/* end range input */
 
 /* start buttons */
 
@@ -199,7 +213,7 @@ button {
 	border: 1px solid #333;
 	border-radius: 3px;
 	padding: 4px 12px;
-	overflow: visible; /* IE width fix, does not affect other browsers */
+	overflow: visible; /* old IE width fix, does not affect other browsers */
 	-webkit-transition: color .2s, background-color .2s;
 	-moz-transition: color .2s, background-color .2s;
 	-ms-transition: color .2s, background-color .2s;
@@ -353,7 +367,7 @@ ol.inline-fields, ul.inline-fields {
 
 /*** checkbox and radio inputs ***/
 
-/* used in conjunction with .vertical-fields or .inline-fields */
+/* use with .vertical-fields or .inline-fields */
 ol.cb-rb-fields, ul.cb-rb-fields {
 	list-style: none;
 	margin: 0;
