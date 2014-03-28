@@ -196,10 +196,10 @@ input[type=range] {
 	height: 24px;
 	cursor: pointer;
 }
-	input[type=range][disabled],
-	input[type=range].disabled {
-		cursor: default;
-	}
+input[type=range][disabled],
+input[type=range].disabled {
+	cursor: default;
+}
 
 /* end range input */
 
