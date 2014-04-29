@@ -80,7 +80,12 @@ textarea:invalid {
 
 /* start text inputs, selects, textareas */
 
-input:not([type=range]):not([type=checkbox]):not([type=radio]):not([type=submit]),
+input[type=text],
+input[type=password],
+input[type=email],
+input[type=number],
+input[type=tel],
+input[type=url],
 select,
 textarea {
 	width: 140px;
@@ -100,50 +105,70 @@ textarea {
 	line-height: 16px;
 }
 
-input:not([type=range]):not([type=checkbox]):not([type=radio]):not([type=submit]):focus,
+input[type=text]:focus,
+input[type=password]:focus,
+input[type=email]:focus,
+input[type=number]:focus,
+input[type=tel]:focus,
+input[type=url]:focus,
 select:focus,
 textarea:focus {
 	border-color: #333;
 	outline: none;
 }
 
-input:not([type=range]):not([type=checkbox]):not([type=radio]):not([type=submit])[disabled],
-input:not([type=range]):not([type=checkbox]):not([type=radio]):not([type=submit]).disabled,
+input[type=text][disabled],
+input[type=password][disabled],
+input[type=email][disabled],
+input[type=number][disabled],
+input[type=tel][disabled],
+input[type=url][disabled],
+input[type=text].disabled,
+input[type=password].disabled,
+input[type=email].disabled,
+input[type=number].disabled,
+input[type=tel].disabled,
+input[type=url].disabled,
 select[disabled], select.disabled,
 textarea[disabled], textarea.disabled {
 	color: #ccc;
 	border-color: #dedede;
 }
 
-input:not([type=checkbox]):not([type=radio]):not([type=submit]).invalid,
+input[type=text].invalid,
+input[type=password].invalid,
+input[type=email].invalid,
+input[type=number].invalid,
+input[type=tel].invalid,
+input[type=url].invalid,
 select.invalid,
 textarea.invalid {
 	border-color: #c00;
 }
 
-input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-med,
+input.input-med,
 select.input-med {
 	/* default */
 	width: 140px;
 }
-input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-xshort,
+input.input-xshort,
 select.input-xshort {
 	width: 40px;
 	min-width: 40px;
 }
-input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-short,
+input.input-short,
 select.input-short {
 	width: 80px;
 }
-input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-long,
+input.input-long,
 select.input-long {
 	width: 240px;
 }
-input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-xlong,
+input.input-xlong,
 select.input-xlong {
 	width: 360px;
 }
-input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-auto,
+input.input-auto,
 select.input-auto {
 	width: auto;
 	min-width: auto;
