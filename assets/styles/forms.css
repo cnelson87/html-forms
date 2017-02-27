@@ -44,8 +44,16 @@ input, select, textarea, button {
 	font-size: 14px;
 	line-height: 16px;
 	vertical-align: top;
+	background: none;
+	border: 0;
 	margin: 0;
 	padding: 0;
+	outline: 0;
+}
+
+// Removed dotted line from input on Firefox
+input::-moz-focus-inner {
+	border: 0;
 }
 
 input:invalid,
@@ -67,9 +75,25 @@ textarea:invalid {
 	color: #ababab;
 	opacity: 1;
 }
-::input-placeholder {
+::placeholder {
 	color: #ababab;
 	opacity: 1;
+}
+:focus::-webkit-input-placeholder {
+	color: transparent;
+	opacity: 0;
+}
+:focus::-moz-placeholder {
+	color: transparent;
+	opacity: 0;
+}
+:focus:-ms-input-placeholder {
+	color: transparent;
+	opacity: 0;
+}
+:focus::placeholder {
+	color: transparent;
+	opacity: 0;
 }
 
 /* start text inputs, selects, textareas */
@@ -96,6 +120,7 @@ select {
 }
 
 textarea {
+	width: 240px;
 	height: 38px;
 	line-height: 16px;
 	resize: none;
@@ -186,8 +211,8 @@ textarea.textarea-lrg {
 input[type=checkbox],
 input[type=radio] {
 	/* setting exact size removes IE padding, makes uniform cross-browser */
-	width: 16px;
-	height: 16px;
+	width: 20px;
+	height: 20px;
 	cursor: pointer;
 	vertical-align: middle;
 }
@@ -243,7 +268,7 @@ button {
 	border: 1px solid #333;
 	border-radius: 3px;
 	padding: 4px 12px;
-	overflow: visible; /* old IE width fix, does not affect other browsers */
+	/* overflow: visible; /* old IE width fix, does not affect other browsers */
 	transition: color .2s, background-color .2s;
 }
 input[type=submit]:focus, input[type=submit]:hover,
