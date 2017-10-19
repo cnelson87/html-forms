@@ -28,6 +28,11 @@ label, span.label {
 label.disabled {
 	color: #ccc;
 }
+label.error {
+	color: #900;
+	font-weight: bold;
+	padding: 0;
+}
 
 output {
 	display: inline-block;
@@ -39,19 +44,21 @@ output {
 }
 
 input, select, textarea, button {
+	display: inline-block;
 	color: #333;
 	font-family: Arial, sans-serif;
 	font-size: 14px;
 	line-height: 16px;
 	vertical-align: top;
 	background: none;
+	box-shadow: 0;
 	border: 0;
 	margin: 0;
 	padding: 0;
 	outline: 0;
 }
 
-// Removed dotted line from input on Firefox
+/* Removed dotted line from input on Firefox */
 input::-moz-focus-inner {
 	border: 0;
 }
@@ -351,38 +358,38 @@ ol.column-fields, ul.column-fields {
 	.inline-fields > li,
 	.column-fields > li {
 		min-height: 24px; /* matches input height */
-		margin: 0 0 8px 0;
+		margin: 0 0 8px;
 	}
 
 	/* side-by-side label / input */
-	.horizontal-fields > li > label,
-	.horizontal-fields > li > span.label {
+	.horizontal-fields > li > label:not(.error),
+	.horizontal-fields > li > span.label:not(.error) {
 		width: 120px;
 		text-align: right;
 		margin-right: 5px;
 	}
-	.horizontal-fields.label-width-short > li > label,
-	.horizontal-fields.label-width-short > li > span.label,
-	.horizontal-fields > li > label.width-short,
-	.horizontal-fields > li > span.label.width-short {
+	.horizontal-fields.label-width-short > li > label:not(.error),
+	.horizontal-fields.label-width-short > li > span.label:not(.error),
+	.horizontal-fields > li > label.width-short:not(.error),
+	.horizontal-fields > li > span.label.width-short:not(.error) {
 		width: 80px;
 	}
-	.horizontal-fields.label-width-long > li > label,
-	.horizontal-fields.label-width-long > li > span.label,
-	.horizontal-fields > li > label.width-long,
-	.horizontal-fields > li > span.label.width-short {
+	.horizontal-fields.label-width-long > li > label:not(.error),
+	.horizontal-fields.label-width-long > li > span.label:not(.error),
+	.horizontal-fields > li > label.width-long:not(.error),
+	.horizontal-fields > li > span.label.width-short:not(.error) {
 		width: 160px;
 	}
-	.horizontal-fields.label-width-auto > li > label,
-	.horizontal-fields.label-width-auto > li > span.label,
-	.horizontal-fields > li > label.width-auto,
-	.horizontal-fields > li > span.label.width-short {
+	.horizontal-fields.label-width-auto > li > label:not(.error),
+	.horizontal-fields.label-width-auto > li > span.label:not(.error),
+	.horizontal-fields > li > label.width-auto:not(.error),
+	.horizontal-fields > li > span.label.width-short:not(.error) {
 		width: auto;
 	}
-	.horizontal-fields.label-align-left > li > label,
-	.horizontal-fields.label-align-left > li > span.label,
-	.horizontal-fields > li > label.align-left,
-	.horizontal-fields > li > span.label.align-left {
+	.horizontal-fields.label-align-left > li > label:not(.error),
+	.horizontal-fields.label-align-left > li > span.label:not(.error),
+	.horizontal-fields > li > label.align-left:not(.error),
+	.horizontal-fields > li > span.label.align-left:not(.error) {
 		text-align: left;
 	}
 
@@ -398,10 +405,10 @@ ol.column-fields, ul.column-fields {
 	}
 
 	/* stacked label / input */
-	.vertical-fields > li > label,
-	.vertical-fields > li > span.label {
+	.vertical-fields > li > label:not(.error),
+	.vertical-fields > li > span.label:not(.error) {
 		display: block;
-		margin: 0 0 2px 0;
+		margin: 0 0 2px;
 	}
 
 	/* label / input side-by-side */

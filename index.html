@@ -31,6 +31,9 @@
 	<!--[if IE 9]><script src="assets/scripts/shims/classList.js"></script><![endif]-->
 	<script src="assets/scripts/lib/modernizr.custom.min.js"></script>
 	<script src="assets/scripts/lib/jquery.min.js"></script>
+	<script src="assets/scripts/lib/jquery-ui.min.js"></script>
+	<script src="assets/scripts/lib/jquery.validate.min.js"></script>
+	<script src="assets/scripts/lib/additional-methods.min.js"></script>
 	<script src="assets/scripts/lib/underscore.min.js"></script>
 	<script src="assets/scripts/cnjs.js"></script>
 	<script src="assets/scripts/utils.js"></script>
@@ -56,22 +59,27 @@
 
 				<h1>HTML Forms</h1>
 
-				<form id="Form" method="POST" action="index.html">
+				<form id="TestForm" method="POST" action="index.html">
+
+					<div class="error-message" id="error-message" style="display:none;">
+						ERROR
+					</div>
 
 					<fieldset>
 						<h2>Horizontal Form Fields</h2>
+						<p>* required field</p>
 						<ol class="horizontal-fields">
 							<li>
-								<label for="Text1A">Text</label>
-								<input type="text" id="Text1A" name="Text1A" data-label="Text" placeholder="Text" />
+								<label for="Text1A">Text *</label>
+								<input type="text" id="Text1A" name="Text1A" data-label="Text" placeholder="Text" required />
 							</li>
 							<li>
 								<label for="Text1B"><span class="offscreen">Text B</span></label>
 								<input type="text" id="Text1B" name="Text1B" data-label="Text B" placeholder="Text" />
 							</li>
 							<li>
-								<label for="Password1">Password</label>
-								<input type="password" id="Password1" name="Password1" data-label="Password" placeholder="Password" />
+								<label for="Password1">Password *</label>
+								<input type="password" id="Password1" name="Password1" data-label="Password" placeholder="Password" required />
 							</li>
 							<li>
 								<label for="Email1">Email</label>
@@ -90,8 +98,8 @@
 								<input type="tel" id="Tel1" name="Tel1" maxlength="10" data-label="Telephone" placeholder="Tel" />
 							</li>
 							<li>
-								<label for="Select1">Select</label>
-								<select id="Select1" name="Select1" data-label="Select">
+								<label for="Select1">Select *</label>
+								<select id="Select1" name="Select1" data-label="Select" class="input-med" required>
 									<option value="">Select</option>
 									<option value="A">A</option>
 									<option value="B">B</option>
@@ -100,7 +108,6 @@
 									<option value="2">2</option>
 									<option value="3">3</option>
 								</select>
-								<span class="form-note">form note</span>
 							</li>
 							<li>
 								<label for="Number1">Number</label>
@@ -119,16 +126,16 @@
 						<h3>Horizontal Form Fields <span class="normal">(.label-align-left.label-width-short)</span></h3>
 						<ol class="horizontal-fields label-align-left label-width-short">
 							<li>
-								<label for="Text1A-alt1">Text</label>
-								<input type="text" id="Text1A-alt1" name="Text1A-alt1" data-label="Text" placeholder="Text" />
+								<label for="Text1A-alt1">Text *</label>
+								<input type="text" id="Text1A-alt1" name="Text1A-alt1" data-label="Text" placeholder="Text" required />
 							</li>
 							<li>
 								<label for="Text1B-alt1"><span class="offscreen">Text B</span></label>
 								<input type="text" id="Text1B-alt1" name="Text1B-alt1" data-label="Text B" placeholder="Text" />
 							</li>
 							<li>
-								<label for="Password1-alt1">Password</label>
-								<input type="password" id="Password1-alt1" name="Password1-alt1" data-label="Password" placeholder="Password" />
+								<label for="Password1-alt1">Password *</label>
+								<input type="password" id="Password1-alt1" name="Password1-alt1" data-label="Password" placeholder="Password" required />
 							</li>
 							<li>
 								<label for="Email1-alt1">Email</label>
@@ -152,29 +159,29 @@
 							</li>
 						</ol>
 					</fieldset>
-
-					<fieldset class="form-btns align-right">
+					<div class="form-btns align-right">
 						<em>(custom: align right)</em>
 						&nbsp;
 						<input type="submit" id="Submit1" name="Submit1" value="Submit" />
-					</fieldset>
+					</div>
 
 					<br /><br />
 
 					<fieldset>
 						<h2>Vertical Form Fields</h2>
+						<p>* required field</p>
 						<ol class="vertical-fields">
 							<li>
-								<label for="Text2A">Text</label>
-								<input type="text" id="Text2A" name="Text2A" data-label="Text" placeholder="Text" />
+								<label for="Text2A">Text *</label>
+								<input type="text" id="Text2A" name="Text2A" data-label="Text" placeholder="Text" required />
 							</li>
 							<li>
 								<label for="Text2B"><span class="offscreen">Text B</span></label>
 								<input type="text" id="Text2B" name="Text2B" data-label="Text B" placeholder="Text" />
 							</li>
 							<li>
-								<label for="Password2">Password</label>
-								<input type="password" id="Password2" name="Password2" data-label="Password" placeholder="Password" />
+								<label for="Password2">Password *</label>
+								<input type="password" id="Password2" name="Password2" data-label="Password" placeholder="Password" required />
 							</li>
 							<li>
 								<label for="Email2">Email</label>
@@ -194,7 +201,7 @@
 							</li>
 							<li>
 								<label for="Select2">Select</label>
-								<select id="Select2" name="Select2" data-label="Select" class="input-med">
+								<select id="Select2" name="Select2" data-label="Select" class="input-med" required>
 									<option value="">Select</option>
 									<option value="A">A</option>
 									<option value="B">B</option>
@@ -203,7 +210,6 @@
 									<option value="2">2</option>
 									<option value="3">3</option>
 								</select>
-								<span class="form-note">form note</span>
 							</li>
 							<li>
 								<label for="Number2">Number</label>
@@ -220,21 +226,21 @@
 							</li>
 						</ol>
 					</fieldset>
-
-					<fieldset class="form-btns">
+					<div class="form-btns">
 						<input type="submit" id="Submit2" name="Submit2" value="Submit" />
 						&nbsp;
 						<em>(default: align left)</em>
-					</fieldset>
+					</div>
 
 					<br /><br />
 
 					<fieldset>
 						<h2>Inline Form Fields</h2>
+						<p>* required field</p>
 						<ol class="inline-fields">
 							<li>
-								<label for="Text3A">Text</label>
-								<input type="text" id="Text3A" name="Text3A" data-label="Text" placeholder="Text" />
+								<label for="Text3A">Text *</label>
+								<input type="text" id="Text3A" name="Text3A" data-label="Text" placeholder="Text" required />
 								<!--
 								<label for="Text3B" class="offscreen">Text B</label>
 								<label for="Text3B"><span class="offscreen">Text B</span></label>
@@ -242,8 +248,8 @@
 								<input type="text" id="Text3B" name="Text3B" data-label="Text B" placeholder="Text" />
 							</li>
 							<li>
-								<label for="Password3">Password</label>
-								<input type="password" id="Password3" name="Password3" data-label="Password" placeholder="Password" />
+								<label for="Password3">Password *</label>
+								<input type="password" id="Password3" name="Password3" data-label="Password" placeholder="Password" required />
 							</li>
 							<li>
 								<label for="Email3">Email</label>
@@ -259,7 +265,7 @@
 							</li>
 							<li>
 								<label for="Select3">Select</label>
-								<select id="Select3" name="Select3" data-label="Select">
+								<select id="Select3" name="Select3" data-label="Select" class="input-med" required>
 									<option value="">Select</option>
 									<option value="A">A</option>
 									<option value="B">B</option>
@@ -294,6 +300,9 @@
 							</li>
 						</ol>
 					</fieldset>
+					<div class="form-btns">
+						<input type="submit" id="Submit3" name="Submit3" value="Submit" />
+					</div>
 
 					<br /><br />
 
@@ -519,7 +528,7 @@
 					<br /><br />
 
 					<h2>Button Styles</h2>
-					<fieldset class="form-btns">
+					<div class="form-btns">
 						<input type="submit" value="default" />
 						<br />
 						<br />
@@ -529,7 +538,7 @@
 						<br />
 						<input type="submit" value=".alt-btn" class="alt-btn" />
 						<input type="submit" value=".sm-alt-btn" class="sm-alt-btn" />
-					</fieldset>
+					</div>
 
 					<br /><br />
 
